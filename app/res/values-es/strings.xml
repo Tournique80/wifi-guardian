@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wi-Fi Guardián</string>
+    <string name="subtitle">Protección del chip Wi-Fi · %1$s</string>
+
+    <!-- Notificaciones -->
+    <string name="ch_status">Estado de la protección</string>
+    <string name="ch_alert">Caídas del Wi-Fi</string>
+    <string name="st_starting">Iniciando…</string>
+    <string name="st_waiting_cool">Wi-Fi caído · esperando que se enfríe</string>
+    <string name="st_no_wifi">Sin Wi-Fi conectado</string>
+    <string name="st_paused">En pausa (pantalla apagada)</string>
+    <string name="st_protecting">Protegiendo el Wi-Fi</string>
+    <string name="st_format">%1$s · %2$s · caídas: %3$d</string>
+    <string name="alert_title">Se cayó el chip de Wi-Fi</string>
+    <string name="alert_cool">El teléfono ya está fresco (%1$s). Apágalo por completo y vuelve a encenderlo.</string>
+    <string name="alert_hot">Está a %1$s. NO lo reinicies todavía: en caliente el chip suele no arrancar. Déjalo enfriar%2$s y sácalo de la funda. Te aviso cuando baje de %3$s.</string>
+    <string name="alert_unplug">, desconéctalo del cargador</string>
+    <string name="ready_title">Listo para reiniciar</string>
+    <string name="ready_text">Ya bajó a %1$s. Ahora apaga el teléfono por completo y vuelve a encenderlo.</string>
+
+    <!-- Tarjeta de estado -->
+    <string name="h_stopped">Protección detenida</string>
+    <string name="h_stopped_txt">Actívala en Ajustes para cuidar el chip de Wi-Fi.</string>
+    <string name="h_down">Wi-Fi caído</string>
+    <string name="h_down_cool">Ya está fresco: apaga el teléfono por completo y vuelve a encenderlo.</string>
+    <string name="h_down_hot">Déjalo enfriar antes de reiniciar. Te avisaré cuando baje de %1$s.</string>
+    <string name="h_no_wifi">Sin Wi-Fi</string>
+    <string name="h_no_wifi_txt">La protección se activará sola al conectarte a una red.</string>
+    <string name="h_hot">Protegido · temperatura alta</string>
+    <string name="h_hot_txt">Funciona, pero sobre %1$s el chip es más propenso a caerse.</string>
+    <string name="h_ok">Protegido</string>
+    <string name="h_ok_txt">Router %1$s</string>
+    <string name="h_ok_screen_off">%1$s · también con pantalla apagada</string>
+
+    <!-- Indicadores -->
+    <string name="t_temp">Temperatura</string>
+    <string name="t_drops">Caídas</string>
+    <string name="t_packets">Paquetes</string>
+    <string name="t_packets_sub">enviados al router</string>
+    <string name="t_none">ninguna</string>
+    <string name="z_risk">zona de riesgo</string>
+    <string name="z_caution">precaución</string>
+    <string name="z_safe">zona segura</string>
+
+    <!-- Temperatura -->
+    <string name="temp_title">Temperatura y riesgo</string>
+    <string name="temp_hint">Referencia medida en un Pixel 8 Pro: el chip falló al encender sobre 30 °C y funcionó bajo 28 °C. Puedes ajustar estos límites para tu teléfono.</string>
+    <string name="temp_charging">Está cargando: la carga lo calienta.</string>
+    <string name="temp_adjust">Ajustar límites</string>
+    <string name="th_title">Límites de temperatura</string>
+    <string name="th_restart">Seguro reiniciar bajo (°C)</string>
+    <string name="th_risk">Zona de riesgo desde (°C)</string>
+    <string name="th_save">Guardar</string>
+    <string name="th_cancel">Cancelar</string>
+    <string name="th_reset">Por defecto</string>
+
+    <!-- Ajustes -->
+    <string name="s_title">Ajustes</string>
+    <string name="s_active">Protección activa</string>
+    <string name="s_active_sub">Mantiene despierto el chip mientras usas el teléfono</string>
+    <string name="s_screen">Proteger con la pantalla apagada</string>
+    <string name="s_screen_sub">Más protección, mayor consumo de batería</string>
+    <string name="bat_title">Permitir funcionamiento en segundo plano</string>
+    <string name="bat_txt">Sin esto, Android puede cerrar la protección para ahorrar batería.</string>
+    <string name="bat_btn">Permitir</string>
+
+    <!-- Actividad -->
+    <string name="a_title">Actividad reciente</string>
+    <string name="a_empty">Sin actividad todavía.</string>
+    <string name="e_drop">Caída del chip de Wi-Fi</string>
+    <string name="e_drop_boot">No arrancó al encender</string>
+    <string name="e_drop_recovery">Se cayó y Android no logró recuperarlo</string>
+    <string name="e_drop_off">El Wi-Fi se apagó solo</string>
+    <string name="e_recovered">Wi-Fi recuperado</string>
+    <string name="e_ready">Listo para reiniciar</string>
+    <string name="e_ready_sub">Se enfrió a %1$s</string>
+    <string name="e_connected">Wi-Fi conectado</string>
+    <string name="e_disconnected">Wi-Fi desconectado</string>
+    <string name="e_disconnected_sub">Fuera de alcance o cambio de red</string>
+    <string name="e_user_off">Wi-Fi apagado manualmente</string>
+    <string name="e_started">Protección iniciada</string>
+    <string name="e_stopped">Protección detenida</string>
+    <string name="e_boot">Teléfono encendido</string>
+    <string name="e_updated">App actualizada</string>
+    <string name="e_temp">Temperatura %1$s</string>
+    <string name="e_charging">Cargando</string>
+    <string name="e_screen_on">Protección con pantalla apagada: sí</string>
+    <string name="e_screen_off">Protección con pantalla apagada: no</string>
+    <string name="e_thresholds">Límites de temperatura cambiados</string>
+
+    <!-- Pie / acerca de -->
+    <string name="f_logs_on">Registro técnico detallado: activo</string>
+    <string name="f_logs_off">Registro básico (el detallado se activa con ADB, ver GitHub)</string>
+    <string name="f_version">Versión %1$s</string>
+    <string name="about">Acerca de</string>
+    <string name="about_title">Acerca de Wi-Fi Guardián</string>
+    <string name="about_text">En algunos teléfonos Pixel el chip de Wi-Fi deja de funcionar al azar: el Wi-Fi no enciende o se cae solo, y a veces arrastra al Bluetooth.\n\nLo que descubrimos: el fallo está en la conexión física entre el procesador y el chip de Wi-Fi (PCIe). El driver duerme el chip tras apenas 0,5 s sin tráfico, y cada vez que despierta hay que volver a establecer esa conexión. Una conexión defectuosa termina fallando en uno de esos despertares, y empeora mucho con el calor.\n\nQué hace esta app:\n🛡️ Protege activamente: envía un paquete minúsculo a tu router cada 0,2 s, solo por Wi-Fi, para que el chip nunca esté ocioso, no se duerma y no tenga que volver a despertar, que es justo donde falla. No modifica el chip, el driver ni el sistema, y no necesita root.\n📊 Vigila y avisa: detecta caídas, registra la temperatura y te dice cuándo el teléfono está lo bastante frío para reiniciar.\n\nSi tu Wi-Fi ya está caído:\n1. Apaga el teléfono por completo.\n2. Déjalo enfriar 15–20 minutos: sin funda, sin cargador, en un lugar fresco o frente a un ventilador. Nunca en el freezer ni en el refrigerador: la condensación puede dañarlo.\n3. Enciéndelo, abre Wi-Fi Guardián y activa el Wi-Fi.\n\nEs una mitigación para un problema de hardware, no una reparación. Puede gastar algo más de batería. Es gratis y de código abierto.\n\nHecho con ❤️ en Chile 🇨🇱 · by Totihue</string>
+    <string name="about_github">Ver en GitHub</string>
+    <string name="about_close">Cerrar</string>
+</resources>

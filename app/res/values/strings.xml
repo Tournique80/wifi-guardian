@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wi-Fi Guardian</string>
+    <string name="subtitle">Wi-Fi chip protection · %1$s</string>
+
+    <!-- Notifications -->
+    <string name="ch_status">Protection status</string>
+    <string name="ch_alert">Wi-Fi drops</string>
+    <string name="st_starting">Starting…</string>
+    <string name="st_waiting_cool">Wi-Fi down · waiting for it to cool down</string>
+    <string name="st_no_wifi">No Wi-Fi connected</string>
+    <string name="st_paused">Paused (screen off)</string>
+    <string name="st_protecting">Protecting Wi-Fi</string>
+    <string name="st_format">%1$s · %2$s · drops: %3$d</string>
+    <string name="alert_title">The Wi-Fi chip went down</string>
+    <string name="alert_cool">The phone is cool (%1$s). Turn it off completely and turn it back on.</string>
+    <string name="alert_hot">It is at %1$s. Do NOT restart yet: when warm, the chip often fails to start. Let it cool down%2$s and take it out of its case. I will tell you when it drops below %3$s.</string>
+    <string name="alert_unplug">, unplug the charger</string>
+    <string name="ready_title">Ready to restart</string>
+    <string name="ready_text">It cooled down to %1$s. Now turn the phone off completely and turn it back on.</string>
+
+    <!-- Status card -->
+    <string name="h_stopped">Protection stopped</string>
+    <string name="h_stopped_txt">Turn it on in Settings to look after the Wi-Fi chip.</string>
+    <string name="h_down">Wi-Fi down</string>
+    <string name="h_down_cool">It is cool now: turn the phone off completely and turn it back on.</string>
+    <string name="h_down_hot">Let it cool down before restarting. I will tell you when it drops below %1$s.</string>
+    <string name="h_no_wifi">No Wi-Fi</string>
+    <string name="h_no_wifi_txt">Protection starts automatically when you connect to a network.</string>
+    <string name="h_hot">Protected · high temperature</string>
+    <string name="h_hot_txt">Working, but above %1$s the chip is more likely to drop.</string>
+    <string name="h_ok">Protected</string>
+    <string name="h_ok_txt">Router %1$s</string>
+    <string name="h_ok_screen_off">%1$s · also with screen off</string>
+
+    <!-- Tiles -->
+    <string name="t_temp">Temperature</string>
+    <string name="t_drops">Drops</string>
+    <string name="t_packets">Packets</string>
+    <string name="t_packets_sub">sent to the router</string>
+    <string name="t_none">none</string>
+    <string name="z_risk">risk zone</string>
+    <string name="z_caution">caution</string>
+    <string name="z_safe">safe zone</string>
+
+    <!-- Temperature card -->
+    <string name="temp_title">Temperature and risk</string>
+    <string name="temp_hint">Reference measured on a Pixel 8 Pro: the chip failed to start above 30 °C and worked below 28 °C. You can adjust these limits for your phone.</string>
+    <string name="temp_charging">It is charging: charging heats it up.</string>
+    <string name="temp_adjust">Adjust limits</string>
+    <string name="th_title">Temperature limits</string>
+    <string name="th_restart">Safe to restart below (°C)</string>
+    <string name="th_risk">Risk zone from (°C)</string>
+    <string name="th_save">Save</string>
+    <string name="th_cancel">Cancel</string>
+    <string name="th_reset">Defaults</string>
+
+    <!-- Settings -->
+    <string name="s_title">Settings</string>
+    <string name="s_active">Protection on</string>
+    <string name="s_active_sub">Keeps the chip awake while you use the phone</string>
+    <string name="s_screen">Protect with screen off</string>
+    <string name="s_screen_sub">More protection, higher battery use</string>
+    <string name="bat_title">Allow running in the background</string>
+    <string name="bat_txt">Without this, Android may close the protection to save battery.</string>
+    <string name="bat_btn">Allow</string>
+
+    <!-- Activity -->
+    <string name="a_title">Recent activity</string>
+    <string name="a_empty">No activity yet.</string>
+    <string name="e_drop">Wi-Fi chip went down</string>
+    <string name="e_drop_boot">Did not start when the phone turned on</string>
+    <string name="e_drop_recovery">Went down and Android could not recover it</string>
+    <string name="e_drop_off">Wi-Fi turned itself off</string>
+    <string name="e_recovered">Wi-Fi recovered</string>
+    <string name="e_ready">Ready to restart</string>
+    <string name="e_ready_sub">Cooled down to %1$s</string>
+    <string name="e_connected">Wi-Fi connected</string>
+    <string name="e_disconnected">Wi-Fi disconnected</string>
+    <string name="e_disconnected_sub">Out of range or network change</string>
+    <string name="e_user_off">Wi-Fi turned off manually</string>
+    <string name="e_started">Protection started</string>
+    <string name="e_stopped">Protection stopped</string>
+    <string name="e_boot">Phone turned on</string>
+    <string name="e_updated">App updated</string>
+    <string name="e_temp">Temperature %1$s</string>
+    <string name="e_charging">Charging</string>
+    <string name="e_screen_on">Protect with screen off: yes</string>
+    <string name="e_screen_off">Protect with screen off: no</string>
+    <string name="e_thresholds">Temperature limits changed</string>
+
+    <!-- Footer / about -->
+    <string name="f_logs_on">Detailed technical log: on</string>
+    <string name="f_logs_off">Basic log (detailed log can be enabled with ADB, see GitHub)</string>
+    <string name="f_version">Version %1$s</string>
+    <string name="about">About</string>
+    <string name="about_title">About Wi-Fi Guardian</string>
+    <string name="about_text">On some Pixel phones the Wi-Fi chip randomly stops working: Wi-Fi will not turn on or drops by itself, and sometimes Bluetooth goes with it.\n\nWhat we found: the failure happens in the physical link between the processor and the Wi-Fi chip (PCIe). The driver puts the chip to sleep after just 0.5 s without traffic, and the link has to be re-established every time it wakes up. A faulty link eventually fails at one of those wake-ups, and it gets much worse with heat.\n\nWhat this app does:\n🛡️ Protects actively: it sends a tiny packet to your router every 0.2 s, only over Wi-Fi, so the chip never sits idle, never falls asleep, and never has to wake up again, which is exactly where it fails. It does not modify the chip, the driver or the system, and it needs no root.\n📊 Watches and warns: it detects drops, logs temperature and tells you when the phone is cool enough to restart.\n\nIf your Wi-Fi is already down:\n1. Turn the phone off completely.\n2. Let it cool down for 15–20 minutes: no case, no charger, in a cool place or in front of a fan. Never in the freezer or the fridge: condensation can damage it.\n3. Turn it on, open Wi-Fi Guardian and turn on Wi-Fi.\n\nThis is a workaround for a hardware problem, not a repair. It may use a bit more battery. It is free and open source.\n\nMade with ❤️ in Chile 🇨🇱 · by Totihue</string>
+    <string name="about_github">View on GitHub</string>
+    <string name="about_close">Close</string>
+</resources>
